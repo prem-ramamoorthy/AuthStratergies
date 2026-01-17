@@ -8,9 +8,9 @@ export function setSessionCookie(
   res.cookie("session_id", sessionId, {
     httpOnly: true,
     secure: env.NODE_ENV === "production",
-    sameSite: "lax",
     maxAge: env.SESSION_DURATION_SECONDS * 1000,
-    path: "/"
+    path: "/",
+    domain: "https://auth-stratergies.vercel.app"
   });
 }
 

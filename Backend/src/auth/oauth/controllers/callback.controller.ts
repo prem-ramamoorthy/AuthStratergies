@@ -9,6 +9,10 @@ import { findUserByEmail, createUser } from "../../../users/user.repository.js";
 import { linkOAuthAccount } from "../oauth.repository.js";
 import { env } from "../../../config/env.js";
 
+interface TokenResponse {
+    access_token: string;
+}
+
 export async function oauthCallback(
     req: Request,
     res: Response
@@ -24,7 +28,7 @@ export async function oauthCallback(
     if (state !== req.cookies["oauth_state"]) {
         return res.redirect("https://auth-stratergies.vercel.app/");
     }
-    const tokenResponse = await exchangeCodeForToken(code);
+    const tokenResponse: TokenResponse = await exchangeCodeForToken(code) as TokenResponse;
     const profile = await fetchUserProfile(tokenResponse.access_token as string);
     let user = await findUserByEmail(profile.email as string);
     if (!user) {

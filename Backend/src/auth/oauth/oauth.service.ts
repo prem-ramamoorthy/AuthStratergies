@@ -9,7 +9,7 @@ export async function exchangeCodeForToken(code: string)  : Promise<any> {
       code,
       client_id: googleProvider.clientId,
       client_secret: googleProvider.clientSecret,
-      redirect_uri: "http://localhost:3000/auth/oauth/google/callback",
+      redirect_uri: "https://auth-stratergies.vercel.app/auth/oauth/google/callback",
       grant_type: "authorization_code"
     })
   });

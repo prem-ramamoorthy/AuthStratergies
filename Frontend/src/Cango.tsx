@@ -11,7 +11,7 @@ export default function Cango() {
         const checkAuth = async () => {
             try {
                 if (authstrategy === "session") {
-                    const res = await fetch("http://localhost:3000/session/authenticate", {
+                    const res = await fetch("https://auth-stratergies-mg2m.vercel.app/session/authenticate", {
                         method: "GET",
                         credentials: "include"
                     });
@@ -22,7 +22,7 @@ export default function Cango() {
                 }
 
                 if (authstrategy === "oauth_google") {
-                    const res = await fetch("http://localhost:3000/auth/oauth/authenticate", {
+                    const res = await fetch("https://auth-stratergies-mg2m.vercel.app/auth/oauth/authenticate", {
                         method: "GET",
                         credentials: "include"
                     });
@@ -33,7 +33,7 @@ export default function Cango() {
                 }
 
                 if (authstrategy === "jwt") {
-                    const res = await fetch("http://localhost:3000/jwt/authenticate", {
+                    const res = await fetch("https://auth-stratergies-mg2m.vercel.app/jwt/authenticate", {
                         method: "GET",
                         credentials: "include",
                         headers: { "Authorization": `Bearer ${localStorage.getItem("access_token") || ""}` }
@@ -46,7 +46,7 @@ export default function Cango() {
                     }
 
                     if (res.status === 401) {
-                        const refreshRes = await fetch("http://localhost:3000/jwt/refresh", {
+                        const refreshRes = await fetch("https://auth-stratergies-mg2m.vercel.app/jwt/refresh", {
                             method: "POST",
                             credentials: "include",
                             headers: { "Content-Type": "application/json" },

@@ -1,4 +1,4 @@
-CREATE TABLE oauth_accounts (
+CREATE TABLE IF NOT EXISTS oauth_accounts (
   id UUID PRIMARY KEY,
   user_id UUID NOT NULL,
   provider TEXT NOT NULL,

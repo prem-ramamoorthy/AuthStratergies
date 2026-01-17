@@ -12,7 +12,7 @@ export default function App() {
   async function handleGoogleLogin() {
     setLoading(true);
     localStorage.setItem("authMethod", "oauth_google");
-    window.location.href = "http://localhost:3000/auth/oauth/google";
+    window.location.href = "https://auth-stratergies-mg2m.vercel.app/auth/oauth/google";
   }
 
   async function handleAuth() {
@@ -20,8 +20,8 @@ export default function App() {
       setLoading(true);
 
       const endpoint = isRegister
-        ? `http://localhost:3000/auth/register`
-        : authMethod !== "basic" ? `http://localhost:3000/${authMethod}/login` : `http://localhost:3000/auth/login`;
+        ? `https://auth-stratergies-mg2m.vercel.app/auth/register`
+        : authMethod !== "basic" ? `https://auth-stratergies-mg2m.vercel.app/${authMethod}/login` : `https://auth-stratergies-mg2m.vercel.app/auth/login`;
 
       const res = await fetch(endpoint, {
         method: "POST",

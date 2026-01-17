@@ -10,5 +10,10 @@ export const env = {
   JWT_SECRET: process.env.JWT_SECRET || "default_secret",
   REFRESH_SECRET: process.env.REFRESH_TOKEN_SECRET || "default_refresh_secret",
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || "",
-  GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET || ""
+  GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET || "",
+  DATABASE_HOST: process.env.DATABASE_HOST || "",
+  DATABASE_PORT: process.env.DATABASE_PORT || "5432",
+  DATABASE_USER: process.env.DATABASE_USER || "",
+  DATABASE_PASSWORD: process.env.DATABASE_PASSWORD || "",
+  DATABASE_NAME: process.env.DATABASE_NAME || "",
 };

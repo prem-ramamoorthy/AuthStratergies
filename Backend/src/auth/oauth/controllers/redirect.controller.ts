@@ -12,7 +12,7 @@ export function oauthRedirect(req: Request, res: Response) {
 
   const params = new URLSearchParams({
     client_id: googleProvider.clientId,
-    redirect_uri: "http://localhost:3000/auth/oauth/google/callback",
+    redirect_uri: "https://auth-stratergies-mg2m.vercel.app/auth/oauth/google/callback",
     response_type: "code",
     scope: googleProvider.scopes.join(" "),
     state

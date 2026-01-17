@@ -17,7 +17,7 @@ export function Dashboard() {
         else if (stratergy === "oauth_google") {
             localStorage.removeItem("loggedin");
             localStorage.removeItem("authMethod");
-            fetch('http://localhost:3000/auth/oauth/logout', {
+            fetch('https://auth-stratergies-mg2m.vercel.app/auth/oauth/logout', {
                 method: 'POST',
                 credentials: 'include',
             }).then(() => alert("Logged out successfully!")).finally(() => navigate('/'));
@@ -25,7 +25,7 @@ export function Dashboard() {
         else if (stratergy === "session") {
             localStorage.removeItem("loggedin");
             localStorage.removeItem("authMethod");
-            fetch('http://localhost:3000/session/logout', {
+            fetch('https://auth-stratergies-mg2m.vercel.app/session/logout', {
                 method: 'POST',
                 credentials: 'include',
             }).then(() => alert("Logged out successfully!")).finally(() => navigate('/'));
@@ -33,7 +33,7 @@ export function Dashboard() {
         else if (stratergy === "jwt") {
             localStorage.removeItem("loggedin");
             localStorage.removeItem("authMethod");
-            fetch('http://localhost:3000/jwt/logout', {
+            fetch('https://auth-stratergies-mg2m.vercel.app/jwt/logout', {
                 method: 'POST',
                 credentials: 'include',
             }).then(() => {

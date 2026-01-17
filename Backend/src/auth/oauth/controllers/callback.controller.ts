@@ -19,10 +19,10 @@ export async function oauthCallback(
     };
 
     if (!code || !state) {
-        return res.redirect("http://localhost:5173/");
+        return res.redirect("https://auth-stratergies.vercel.app/");
     }
     if (state !== req.cookies["oauth_state"]) {
-        return res.redirect("http://localhost:5173/");
+        return res.redirect("https://auth-stratergies.vercel.app/");
     }
     const tokenResponse = await exchangeCodeForToken(code);
     const profile = await fetchUserProfile(tokenResponse.access_token as string);
@@ -48,7 +48,7 @@ export async function oauthCallback(
         path: "/"
     });
     res.redirect(
-        `http://localhost:5173/dashboard`
+        `https://auth-stratergies.vercel.app/dashboard`
     );
     return
 }

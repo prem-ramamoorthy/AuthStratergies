@@ -7,7 +7,8 @@ export function setSessionCookie(
 ) {
   res.cookie("session_id", sessionId, {
     httpOnly: true,
-    secure: env.NODE_ENV === "production",
+    secure: true,
+    sameSite: "none",
     maxAge: env.SESSION_DURATION_SECONDS * 1000,
     path: "/"
   });

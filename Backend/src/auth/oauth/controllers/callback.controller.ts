@@ -48,8 +48,7 @@ export async function oauthCallback(
         httpOnly: true,
         secure: env.NODE_ENV === "production",
         maxAge: env.SESSION_DURATION_SECONDS * 1000,
-        path: "/",
-        domain: "https://auth-stratergies.vercel.app"
+        path: "/"
     });
     res.redirect(
         `https://auth-stratergies.vercel.app/dashboard`

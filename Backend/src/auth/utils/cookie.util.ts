@@ -9,8 +9,7 @@ export function setSessionCookie(
     httpOnly: true,
     secure: env.NODE_ENV === "production",
     maxAge: env.SESSION_DURATION_SECONDS * 1000,
-    path: "/",
-    domain: "https://auth-stratergies.vercel.app"
+    path: "/"
   });
 }
 

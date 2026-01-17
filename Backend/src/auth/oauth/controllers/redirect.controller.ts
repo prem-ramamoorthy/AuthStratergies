@@ -10,7 +10,6 @@ export function oauthRedirect(req: Request, res: Response) {
     secure: process.env.NODE_ENV === "production",
     maxAge: 10 * 60 * 1000,
     path: "/",
-    domain: "https://auth-stratergies.vercel.app"
   });
 
   const params = new URLSearchParams({

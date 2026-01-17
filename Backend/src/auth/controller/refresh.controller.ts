@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { findrefreshTokenById, getUserdetails, updaterefreshToken } from "../jwt/jwt.store";
-import { generateToken } from "../jwt/jwt.tokens";
+import { findrefreshTokenById, getUserdetails, updaterefreshToken } from "../jwt/jwt.store.js";
+import { generateToken } from "../jwt/jwt.tokens.js";
 
 export const JWTrefreshController = async (req: Request, res: Response) => {
     try {

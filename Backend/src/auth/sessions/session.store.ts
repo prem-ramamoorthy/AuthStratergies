@@ -1,5 +1,5 @@
-import { query } from "../../database/client";
-import { Session } from "./session.model";
+import { query } from "../../database/client.js";
+import { Session } from "./session.model.js";
 
 export async function createSession(
   id: string,

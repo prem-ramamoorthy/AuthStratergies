@@ -1,5 +1,5 @@
-import * as userRepo from "./user.repository";
-import { User } from "./user.model";
+import * as userRepo from "./user.repository.js";
+import { User } from "./user.model.js";
 
 export async function registerUser(
   email: string,

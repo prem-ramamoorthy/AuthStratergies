@@ -1,5 +1,5 @@
-import { OAuthProvider } from "../oauth.model";
-import { env } from "../../../config/env";
+import { OAuthProvider } from "../oauth.model.js";
+import { env } from "../../../config/env.js";
 
 export const googleProvider: OAuthProvider = {
   clientId: env.GOOGLE_CLIENT_ID,

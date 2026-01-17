@@ -1,5 +1,5 @@
-import { query } from "../database/client";
-import { User } from "./user.model";
+import { query } from "../database/client.js";
+import { User } from "./user.model.js";
 import { v4 as uuidv4 } from "uuid";
 
 export async function findUserByEmail(

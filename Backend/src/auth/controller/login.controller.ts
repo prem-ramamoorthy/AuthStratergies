@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { deleteExistingSession, login } from "../services/auth.service";
-import { validateLoginInput } from "../validators/login.validator";
-import { createUserSession } from "../services/session.service";
-import { setSessionCookie } from "../utils/cookie.util";
-import { generateToken, generateRefreshToken } from "../jwt/jwt.tokens";
-import { createrefreshToken } from "../jwt/jwt.store";
+import { deleteExistingSession, login } from "../services/auth.service.js";
+import { validateLoginInput } from "../validators/login.validator.js";
+import { createUserSession } from "../services/session.service.js";
+import { setSessionCookie } from "../utils/cookie.util.js";
+import { generateToken, generateRefreshToken } from "../jwt/jwt.tokens.js";
+import { createrefreshToken } from "../jwt/jwt.store.js";
 
 export async function loginController(
   req: Request,

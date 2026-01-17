@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { sessionloginController } from "../auth/controller/login.controller";
-import { sessionlogoutController } from "../auth/controller/logout.controller";
-import { authenticate } from "../auth/middleware/authenticate.middleware";
+import { sessionloginController } from "../auth/controller/login.controller.js";
+import { sessionlogoutController } from "../auth/controller/logout.controller.js";
+import { authenticate } from "../auth/middleware/authenticate.middleware.js";
 
 const router = Router();
 

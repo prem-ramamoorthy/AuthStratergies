@@ -3,11 +3,11 @@ import crypto from "crypto";
 import {
     exchangeCodeForToken,
     fetchUserProfile
-} from "../oauth.service";
-import { generateToken } from "../../jwt/jwt.tokens";
-import { findUserByEmail, createUser } from "../../../users/user.repository";
-import { linkOAuthAccount } from "../oauth.repository";
-import { env } from "../../../config/env";
+} from "../oauth.service.js";
+import { generateToken } from "../../jwt/jwt.tokens.js";
+import { findUserByEmail, createUser } from "../../../users/user.repository.js";
+import { linkOAuthAccount } from "../oauth.repository.js";
+import { env } from "../../../config/env.js";
 
 export async function oauthCallback(
     req: Request,

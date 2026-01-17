@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import crypto from "crypto";
-import { googleProvider } from "../providers/google.provider";
+import { googleProvider } from "../providers/google.provider.js";
 
 export function oauthRedirect(req: Request, res: Response) {
   const state = crypto.randomBytes(16).toString("hex");

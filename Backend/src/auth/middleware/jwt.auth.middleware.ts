@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { verifyToken } from "../jwt/jwt.tokens";
+import { verifyToken } from "../jwt/jwt.tokens.js";
 
 export async function authenticate(
   req: Request,

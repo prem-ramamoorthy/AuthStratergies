@@ -4,7 +4,7 @@
   "description": "this package is defined to implement my knowledge in authentication and authorization practically",
   "license": "ISC",
   "author": "prem-ramamoorthy",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
@@ -23,7 +23,7 @@
     "morgan": "^1.10.1",
     "node-fetch": "^3.3.2",
     "pg": "^8.16.3",
-    "uuid": "^13.0.0"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.10",

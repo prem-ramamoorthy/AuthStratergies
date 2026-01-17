@@ -1,7 +1,7 @@
-import { generateSessionId } from "../crypto/random";
-import { getSessionExpiry } from "../sessions/session.utils";
-import * as sessionStore from "../sessions/session.store";
-import { Session } from "../sessions/session.model";
+import { generateSessionId } from "../crypto/random.js";
+import { getSessionExpiry } from "../sessions/session.utils.js";
+import * as sessionStore from "../sessions/session.store.js";
+import { Session } from "../sessions/session.model.js";
 
 export async function createUserSession(
   userId: string

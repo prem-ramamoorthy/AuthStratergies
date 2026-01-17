@@ -1,6 +1,6 @@
-import { createPasswordHash, comparePassword } from "./password.service";
-import * as userService from "../../users/user.service";
-import { User } from "../../users/user.model";
+import { createPasswordHash, comparePassword } from "./password.service.js";
+import * as userService from "../../users/user.service.js";
+import { User } from "../../users/user.model.js";
 
 export async function register(
   email: string,

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { validateSession } from "../services/session.service";
+import { validateSession } from "../services/session.service.js";
 
 export async function authenticate(
   req: Request,

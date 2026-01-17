@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { JWTloginController } from "../auth/controller/login.controller";
-import { authenticate } from "../auth/middleware/jwt.auth.middleware";
-import { JWTrefreshController } from "../auth/controller/refresh.controller";
-import { JWTlogoutController } from "../auth/controller/logout.controller";
+import { JWTloginController } from "../auth/controller/login.controller.js";
+import { authenticate } from "../auth/middleware/jwt.auth.middleware.js";
+import { JWTrefreshController } from "../auth/controller/refresh.controller.js";
+import { JWTlogoutController } from "../auth/controller/logout.controller.js";
 
 const router = Router();
 

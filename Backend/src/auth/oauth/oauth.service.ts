@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { googleProvider } from "./providers/google.provider";
+import { googleProvider } from "./providers/google.provider.js";
 
 export async function exchangeCodeForToken(code: string)  : Promise<any> {
   const response = await fetch(googleProvider.tokenUrl, {

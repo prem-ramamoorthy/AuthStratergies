@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { destroySession } from "../services/session.service";
-import { clearSessionCookie } from "../utils/cookie.util";
-import { deleterefreshToken } from "../jwt/jwt.store";
+import { destroySession } from "../services/session.service.js";
+import { clearSessionCookie } from "../utils/cookie.util.js";
+import { deleterefreshToken } from "../jwt/jwt.store.js";
 
 export async function sessionlogoutController(
   req: Request,

@@ -1,7 +1,7 @@
-import { query } from "../../database/client";
+import { query } from "../../database/client.js";
 import { createHash, randomUUID } from "crypto";
-import { refreshToken } from "./jwt.model";
-import { User } from "../../users/user.model";
+import { refreshToken } from "./jwt.model.js";
+import { User } from "../../users/user.model.js";
 
 export async function createrefreshToken(
     token: string,

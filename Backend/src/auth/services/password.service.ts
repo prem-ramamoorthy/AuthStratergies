@@ -1,4 +1,4 @@
-import { hashPassword, verifyPassword } from "../crypto/hash";
+import { hashPassword, verifyPassword } from "../crypto/hash.js";
 
 export async function createPasswordHash(
   password: string

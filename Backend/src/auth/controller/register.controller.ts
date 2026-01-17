@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { register } from "../services/auth.service";
-import { validateRegisterInput } from "../validators/register.validator";
+import { register } from "../services/auth.service.js";
+import { validateRegisterInput } from "../validators/register.validator.js";
 
 export async function registerController(
     req: Request,

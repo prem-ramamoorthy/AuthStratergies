@@ -1,4 +1,4 @@
-import { query } from "../../database/client";
+import { query } from "../../database/client.js";
 import crypto from "crypto";
 
 export async function linkOAuthAccount(

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { oauthCallback } from "../auth/oauth/controllers/callback.controller";
-import { oauthRedirect } from "../auth/oauth/controllers/redirect.controller";
-import { authenticate } from "../auth/oauth/oauth.authenticate";
-import { clearAccessTokenCookie } from "../auth/utils/cookie.util";
+import { oauthCallback } from "../auth/oauth/controllers/callback.controller.js";
+import { oauthRedirect } from "../auth/oauth/controllers/redirect.controller.js";
+import { authenticate } from "../auth/oauth/oauth.authenticate.js";
+import { clearAccessTokenCookie } from "../auth/utils/cookie.util.js";
 
 const router = Router();
 

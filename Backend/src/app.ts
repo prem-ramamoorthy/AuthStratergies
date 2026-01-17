@@ -4,10 +4,10 @@ import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 
-import authRoutes from "./routes/auth.routes";
-import sessionRoutes from "./routes/session.routes";
-import JWTRoutes from "./routes/jwt.routes";
-import oauthRoutes from "./routes/oauth.routes";
+import authRoutes from "./routes/auth.routes.js";
+import sessionRoutes from "./routes/session.routes.js";
+import JWTRoutes from "./routes/jwt.routes.js";
+import oauthRoutes from "./routes/oauth.routes.js";
 
 const app = express();
 

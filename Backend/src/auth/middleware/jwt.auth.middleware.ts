@@ -15,7 +15,7 @@ export async function authenticate(
     if (!session) {
       return res.status(401).json({ error: "Invalid session" });
     }
-    (req as any).userId = session.email;
+    (req as any).userId = (session as any).email;
     next();
   } catch (error) {
     return res.status(401).json({ error: "Authentication failed" });

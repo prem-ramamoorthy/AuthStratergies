@@ -1,5 +1,4 @@
 import express from "express";
-import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
@@ -13,7 +12,6 @@ const app = express();
 
 app.use(cookieParser());
 app.use(morgan('dev'));
-app.use(helmet());
 app.use(cors({
   origin: ["http://localhost:3000", "http://localhost:5173" , "https://auth-stratergies.vercel.app" , "https://auth-stratergies-mg2m.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],

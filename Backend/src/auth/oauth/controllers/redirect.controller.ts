@@ -1,0 +1,22 @@
+import { Request, Response } from "express";
+import crypto from "crypto";
+import { googleProvider } from "../providers/google.provider";
+
+export function oauthRedirect(req: Request, res: Response) {
+  const state = crypto.randomBytes(16).toString("hex");
+
+  res.cookie("oauth_state", state, {
+    httpOnly: true,
+    sameSite: "lax"
+  });
+
+  const params = new URLSearchParams({
+    client_id: googleProvider.clientId,
+    redirect_uri: "http://localhost:3000/auth/oauth/google/callback",
+    response_type: "code",
+    scope: googleProvider.scopes.join(" "),
+    state
+  });
+
+  res.redirect(`${googleProvider.authorizeUrl}?${params.toString()}`);
+}
